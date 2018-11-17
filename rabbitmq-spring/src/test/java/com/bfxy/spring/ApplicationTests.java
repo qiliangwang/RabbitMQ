@@ -62,8 +62,8 @@ public class ApplicationTests {
 				.bind(new Queue("test.topic.queue", false))		//直接创建队列
 				.to(new TopicExchange("test.topic", false, false))	//直接创建交换机 建立关联关系
 				.with("user.#"));	//指定路由Key
-//
-//
+
+
 		rabbitAdmin.declareBinding(
 				BindingBuilder
 				.bind(new Queue("test.fanout.queue", false))
